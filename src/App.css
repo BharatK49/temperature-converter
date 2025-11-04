@@ -1,0 +1,131 @@
+.toggle-unit {
+  margin: 15px;
+}
+.toggle-unit button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #ffd166;
+  color: #333;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.toggle-unit button:hover {
+  background: #f4a261;
+  transform: translateY(-2px);
+}
+
+
+/* Reset + Fullscreen */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 1s ease;
+}
+
+/* Title */
+.app-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Temperature Card */
+.temperature-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.temperature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Input */
+.temperature-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.temperature-input input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  width: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.temperature-input input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button-group button:hover {
+  transform: translateY(-3px);
+}
+.button-decrease {
+  background: #ff4e50;
+  color: white;
+}
+.button-decrease:hover {
+  background: #e63946;
+}
+.button-increase {
+  background: #06d6a0;
+  color: white;
+}
+.button-increase:hover {
+  background: #04b383;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
